@@ -14,4 +14,4 @@ fetch("https://jsonplaceholder.typicode.com/todos")
    console.log(err);
    });
 
-//source: https://www.simeongriggs.dev/replacing-chained-map-and-filter-with-reduce
+//source: https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
