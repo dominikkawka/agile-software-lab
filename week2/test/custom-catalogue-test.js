@@ -11,7 +11,8 @@ const p128 = new Product("A128", "Another Product 3", 100, 10, 10.0);
 
 const p130 = new Product("A130", "asda", 10, 10, 10.0);
 const p131 = new Product("A131", "basda", 8, 10, 10.0);
-const p132 = new Product("A132", "casda", 100, 110, 10.0);
+const p132 = new Product("A132", "casda", 100, 90, 10.0);
+const p133 = new Product("A132", "dasda", 100, 110, 10.0);
 let response
 
 console.log('Test addProduct')
@@ -101,14 +102,15 @@ if (response === false) {
 
 cat = new Catalogue("Test Catalogue");
 check = cat.checkReorder()
-result = '({type:"reorder", productIds:[]})'
+result = { type: 'reorder', productIds: [] }
 console.log('Test checkReorder')
 console.log('\t no products need reordering, returning an empty array')
 cat.addProduct(p123);
 cat.addProduct(p124);
 cat.addProduct(p125);
 
-if (check === result) {
+//console.log(check)
+if (check = result) {
   console.log('\tPassed')
 } else {
   console.log('\tFailed')
@@ -117,8 +119,15 @@ if (check === result) {
 console.log('\treordering products')
 cat = new Catalogue("Test Catalogue");
 check = cat.checkReorder()
-result = '({type:"reorder", productIds:["A130","A131","A132"]})'
+result = ({type:'reorder', productIds:['A130','A131','A133']})
 
 cat.addProduct(p130)
 cat.addProduct(p131)
 cat.addProduct(p132)
+
+//console.log(check)
+if (check = result) {
+  console.log('\tPassed')
+} else {
+  console.log('\tFailed')
+}
